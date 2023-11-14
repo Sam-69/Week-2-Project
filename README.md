@@ -3,15 +3,23 @@ Question 2). Let’s say we want to build a model to predict booking prices on A
 
 Airbnb price prediction
 import pyforest
+
 data=pd.read_csv("train.csv")
+
 data.head()
+
 Data analysis and exploration
+
 data.shape
+
 data.amenities[0]
+
 ​
 data = {'sets_column': [{'Wireless Internet', 'Air conditioning', 'Kitchen', 'Heating', 'Family/kid friendly', 'Essentials', 'Hair dryer', 'Iron', 'translation missing: en.hosting_amenity_50'}]}
+
 ​
 df = pd.DataFrame(data)
+
 ​
 df['list_column'] = df['sets_column'].apply(lambda x: [f'"{item}"' for item in x])
 ​
